@@ -1,0 +1,60 @@
+Input Functional Dependencies (or 'exit'): StudentID -> FirstName,LastName
+Input Functional Dependencies (or 'exit'): Course -> CourseStart,CourseEnd,Professor
+Input Functional Dependencies (or 'exit'): Professor -> ProfessorEmail
+Input Functional Dependencies (or 'exit'): exit
+Key (can be composite): StudentID,Course
+Choice of the highest normal form to reach (1: 1NF, 2: 2NF, 3: 3NF, B: BCNF, 4: 4NF, 5: 5NF): 3
+in 1NF
+checking for 2NF...
+Table is not in 2NF
+Primary Key :  StudentID_Course
+  StudentID   Course
+0       101  Math101
+1       102  Math101
+2       103    CS101
+3       104   Bio101
+4       105    CS101
+Primary Key :  StudentID
+  FirstName StudentID  LastName
+0      John       101       Doe
+1      Jane       102       Roe
+2   Arindam       103    Khanda
+3      Jose       104  Franklin
+4       Ada       105  Lovelace
+Primary Key :  Course
+   ProfessorEmail CourseStart   Course  CourseEnd  Professor
+0   smith@mst.edu    1/1/2023  Math101  5/30/2023   Dr.Smith
+1   smith@mst.edu    1/1/2023  Math101  5/30/2023   Dr.Smith
+2   jones@mst.edu    2/1/2023    CS101  6/15/2023   Dr.Jones
+3  watson@mst.edu    3/1/2023   Bio101  7/20/2023  Dr.Watson
+4   jones@mst.edu    2/1/2023    CS101  6/15/2023   Dr.Jones
+table StudentID is in 3NF
+table Course is not in 3NF
+Primary Key :  StudentID_Course
+  StudentID   Course
+0       101  Math101
+1       102  Math101
+2       103    CS101
+3       104   Bio101
+4       105    CS101
+Primary Key :  StudentID
+  FirstName StudentID  LastName
+0      John       101       Doe
+1      Jane       102       Roe
+2   Arindam       103    Khanda
+3      Jose       104  Franklin
+4       Ada       105  Lovelace
+Primary Key :  Course
+  CourseStart   Course  CourseEnd  Professor
+0    1/1/2023  Math101  5/30/2023   Dr.Smith
+1    1/1/2023  Math101  5/30/2023   Dr.Smith
+2    2/1/2023    CS101  6/15/2023   Dr.Jones
+3    3/1/2023   Bio101  7/20/2023  Dr.Watson
+4    2/1/2023    CS101  6/15/2023   Dr.Jones
+Primary Key :  Professor
+   ProfessorEmail  Professor
+0   smith@mst.edu   Dr.Smith
+1   smith@mst.edu   Dr.Smith
+2   jones@mst.edu   Dr.Jones
+3  watson@mst.edu  Dr.Watson
+4   jones@mst.edu   Dr.Jones
